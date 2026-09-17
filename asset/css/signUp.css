@@ -1,0 +1,199 @@
+:root {
+    --green-main: #5fb08f;
+    --green-light: #e7f7f2;
+    --green-dark: #2a7b69;
+    --white: #fff;
+    --text-dark: #08382f;
+    --bg-footer: #2a7b69;
+    --text: #25594e;
+    --white: #ffffff;
+}
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Poppins", sans-serif; */
+}
+
+body {
+    background-color: #d8f5e3;
+    color: #134d38;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    color: var(--white);
+    padding: 15px 100px;
+    background: #318f7a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    align-items: center;
+    font-family: 'Orbitron', sans-serif;
+    gap: 8px;
+}
+
+.logo img {
+    width: 35px;
+}
+
+.logo span {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+   .auth-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.auth-buttons button {
+    border: none;
+    border-radius: 6px;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.login {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+}
+
+.register {
+    background: var(--white);
+    color: var(--green-dark);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+/* ===== Main Container ===== */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.register-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.register-form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.register-form label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 0.7rem;
+    display: block;
+}
+
+.register-form input,
+.register-form select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #cde5d8;
+    background: #ecf8f1;
+    margin-top: 5px;
+    outline: none;
+}
+
+.phone-group {
+    display: flex;
+    gap: 10px;
+}
+
+.gender {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 5px;
+}
+
+.password-group {
+    position: relative;
+}
+
+.password-group .toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.upload {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.submit-btn {
+    background: #1a5c44;
+    color: white;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #184b36;
+}
+
+.account-text {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.account-text a {
+    color: #1a5c44;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* ===== Side Image ===== */
+.side-image img {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    /* float: left; */
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .register-container {
+        flex-direction: column;
+    }
+
+    .side-image img {
+        width: 150px;
+    }
+}

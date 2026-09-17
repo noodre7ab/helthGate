@@ -1,0 +1,233 @@
+:root {
+    --green-main:  #2a7b69;
+    --green-light: #e7f7f2;
+    --green-dark: #2a7b69;
+    --white: #fff;
+    --text-dark: #08382f;
+    --bg-footer: #2a7b69;
+    --text: #25594e;
+    --white: #ffffff;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #e6f7f1;
+    color: #08382f;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background: linear-gradient(90deg, #5bbf9e, #469b81);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo img {
+    width: 35px;
+    height: 35px;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 22px;
+}
+
+.logo span {
+    color: #eafdf7;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #d0fff0;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.auth-buttons img {
+    width: 26px;
+    height: 26px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.auth-buttons img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* ===== SERVICES ===== */
+.services-section {
+    background-color: #e6f7f1;
+    text-align: center;
+    padding: 80px 40px;
+}
+
+.services-header h2 {
+    color: var(--green-dark);
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.services-header p {
+    color: #5e8579;
+    font-size: 15px;
+    margin-bottom: 60px;
+}
+
+/* الشبكة */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* الكارت */
+.service-card {
+    background-color: #f0fbf7;
+    border: 2px solid #d4eee5;
+    border-radius: 16px;
+    padding: 35px 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    background-color: #d9f4eb;
+    border-color: #5bbf9e;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* الكارت النشط */
+.service-card.active {
+    background-color: #5bbf9e;
+    border-color: #5bbf9e;
+    color: white;
+    box-shadow: 0 6px 18px rgba(90, 175, 150, 0.4);
+}
+
+/* الأيقونة */
+.service-card .icon img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+/* العناوين والنص */
+.service-card h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--green-dark);
+}
+
+.service-card p {
+    font-size: 14px;
+    color: #5e8579;
+    line-height: 1.5;
+}
+
+.service-card.active h3,
+.service-card.active p {
+    color: white;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: var(--bg-footer);
+    color: var(--white);
+    padding: 3rem 1rem;
+}
+
+.footer-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+.footer-social .icons {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+}
+
+.footer-social img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.1);
+}
