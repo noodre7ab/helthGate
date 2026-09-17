@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="asset/css/signUp.css" rel="stylesheet">
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="image/1.png" alt="logo">
+            <span>Health <strong>Gate</strong></span>
+        </div>
+        <div class="auth-buttons">
+    <button class="login" onclick="window.location.href='login.html'">Login</button>
+    <button class="register" onclick="window.location.href='signUp.html'">Register</button>
+</div>
+    </header>
+
+    <main class="register-container">
+        <form class="register-form" method="post"  action="register.php" enctype="multipart/form-data"> 
+            <h2>Sign in To Your Account</h2>
+            <label>First Name</label>
+            <input type="text" placeholder="" name="firstName">
+
+            <label>Last Name</label>
+            <input type="text" placeholder="" name="lastName">
+
+            <label>Email</label>
+            <input type="email" placeholder="@gmail.com" name="email">
+
+            <label>Phone number</label>
+            <div class="phone-group">
+                <select>
+                    <option>+02</option>
+                    <option>+1</option>
+                    <option>+44</option>
+                </select>
+                <input type="tel" placeholder="" name="telephone">
+            </div>
+
+            <label>Age</label>
+            <input type="number" min="1" max="120" name="age">
+
+            <label>Gender</label>
+            <div class="gender" >
+                <label><input type="radio" name="gender" checked > Male</label >
+                <label><input type="radio" name="gender"> Female</label>
+            </div>
+
+            <label>Password</label>
+            <div class="password-group">
+                <input type="password" id="password" name="password">
+                <span class="toggle" onclick="togglePassword('password', this)">👁️</span>
+            </div>
+
+            <label>Confirm Password</label>
+            <div class="password-group">
+                <input type="password" id="confirmPassword" name="confirmPassword">
+                <span class="toggle" onclick="togglePassword('confirmPassword', this)">👁️</span>
+            </div>
+
+            <div class="upload">
+                <label>Upload Your Image</label>
+                <input type="file" id="upload" accept="image/*" name="image">
+            </div>
+
+            <button type="submit" class="submit-btn">Sign in</button>
+            <p class="account-text">Already have an account ? <a href="#">Login</a></p>
+        </form>
+
+        <div class="side-image">
+            <img src="image/Group.png" alt="Hospital">
+        </div>
+    </main>
+    <!-- ------------------------------------------------------------------------------------------------------ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="js/vue.global.js"></script>
+    <!-- <script src="js/index.js"></script> -->
+    <!-- -----------------------------------------------------------------------------------------------------------------        -->
+</body>
+
+</html>

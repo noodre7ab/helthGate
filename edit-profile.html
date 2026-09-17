@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="asset/css/edit-profile.css">
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <img src="image/1.png" alt="Logo" />
+                <span>Health <strong>Gate</strong></span>
+            </div>
+            <nav class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="home.html">About</a>
+                <a href="home.html">Services</a>
+                <a href="home.html">Departments</a>
+                <a href="home.html" class="active">Doctors</a>
+                <a href="home.html">Contact</a>
+                <a href="home.html">FAQ’s</a>
+            </nav>
+            <div class="auth-buttons">
+                <a href="#"><img src="image/notification 1.png" alt="Notifications" /></a>
+                <a href="#"><img src="image/profile.png" alt="Profile" /></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== Edit Profile Section ===== -->
+    <section class="edit-profile">
+        <h2>My Profile</h2>
+        <p>Got a question? Find quick answers to the most common ones here.</p>
+
+        <div class="profile-card">
+            <div class="profile-info">
+                <img id="profileImage" src="image/profile2.png" alt="Profile Image" class="profile-img">
+                <div>
+                    <h3 id="displayName">Alma Lawson</h3>
+                    <p id="displayEmail">alma.lawson@example.com</p>
+                </div>
+            </div>
+            <button class="edit-btn">Edit Profile</button>
+        </div>
+
+        <!-- ===== Form ===== -->
+        <div class="info-box">
+            <h3>Basic Information:</h3>
+            <form id="editForm" class="edit-form">
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" id="firstName" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" id="lastName" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <div class="phone-input">
+                        <select id="countryCode">
+                            <option value="+20">+20</option>
+                            <option value="+966">+966</option>
+                            <option value="+1">+1</option>
+                        </select>
+                        <input type="tel" id="phone" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Age</label>
+                    <input type="number" id="age" required>
+                </div>
+
+                <div class="form-group gender">
+                    <label>Gender</label>
+                    <div>
+                        <label><input type="radio" name="gender" value="Male"> Male</label>
+                        <label><input type="radio" name="gender" value="Female"> Female</label>
+                    </div>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="save-btn">Save Changes</button>
+                    <a href="profile.html" class="cancel-btn">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-logo">
+                <img src="image/1.png" alt="Logo">
+                <h3>Health Gate</h3>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Departments</a></li>
+                    <li><a href="#">Doctors</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">FAQ’s</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
+                <p>tim.jennings@example.com</p>
+                <p>(406) 555-0120</p>
+            </div>
+
+            <div class="footer-social">
+                <h4>Social Media</h4>
+                <div class="icons">
+                    <a href="#"><img src="image/face.png" alt="Facebook"></a>
+                    <a href="#"><img src="image/ins.png" alt="Instagram"></a>
+                    <a href="#"><img src="image/in.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="image/X.png" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- ===================================================================================================== -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="js/vue.global.js"></script>
+    <script src="asset/js/edit-profile.js"></script>
+
+</body>
+
+</html>

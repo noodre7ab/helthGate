@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="asset/css/profile.css" rel="stylesheet">
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <img src="image/1.png" alt="Logo" />
+                <span>Health <strong>Gate</strong></span>
+            </div>
+                <nav id="nav-links" class="nav-links">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="index.html" class="nav-item">About</a>
+                <a href="index.html" class="nav-item">Services</a>
+                <a href="index.html" class="nav-item">Departments</a>
+                <a href="index.html" class="nav-item">Doctors</a>
+                <a href="#" class="nav-item">Contact</a>
+                <a href="index.html" class="nav-item">FAQ’s</a>
+            </nav>
+            <div class="auth-buttons">
+                <a href="#"><img src="image/notification 1.png" alt="Notifications" /></a>
+                <a href="#"><img src="image/profile.png" alt="Profile" /></a>
+            </div>
+        </div>
+    </header>
+    <!-- Profile Section -->
+    <section class="profile-section">
+        <h2>My Profile</h2>
+        <p>Got a question? Find quick answers to the most common ones here.</p>
+
+        <div class="profile-card">
+            <div class="profile-info">
+                <img src="image/profile2.png" alt="Profile Image" class="profile-img">
+                <div>
+                    <h3>Alma Lawson</h3>
+                    <p>alma.lawson@example.com</p>
+                </div>
+            </div>
+            <button id="editProfileBtn" class="edit-btn">Edit Profile</button>
+        </div>
+
+        <!-- Basic Info -->
+        <div class="info-box">
+            <div class="info-header">
+                <h3>Basic Information:</h3>
+<a href="edit-profile.html" class="edit-icon">✎</a>
+            </div>
+            <div class="info-details">
+                <p>👤 First Name: <span>Alma</span></p>
+                <p>👤 Last Name: <span>Lawson</span></p>
+                <p>📧 Email: <span>alma.lawson@example.com</span></p>
+                <p>♀ Gender: <span>Female</span></p>
+                <p>📞 Phone: <span>(406) 555-0120</span></p>
+                <p>🎂 Age: <span>25</span></p>
+            </div>
+        </div>
+
+        <!-- Chronic Diseases -->
+        <div class="info-box">
+            <div class="info-header">
+                <h3>Chronic Diseases:</h3>
+                <span class="edit-icon">✎</span>
+            </div>
+            <ul class="disease-list">
+                <li>🏥 Diabetes</li>
+                <li>🏥 Hypertension</li>
+                <li>🏥 Asthma</li>
+            </ul>
+        </div>
+
+    <!-- Appointment Form -->
+<div class="form-container">
+    <div class="row">
+        <select>
+            <option value="" disabled selected>Select Department</option>
+            <option>Cardiology</option>
+            <option>Neurology</option>
+            <option>Orthopedics</option>
+            <option>Pediatrics</option>
+        </select>
+
+        <select>
+            <option value="" disabled selected>Select Doctor</option>
+            <option>Walter White</option>
+            <option> Sarah Jhonson</option>
+            <option>Amanda Jepson</option>
+            <option>William Anderson</option>
+            <option> Jessy tom</option>
+            <option>emily peter</option>
+
+
+        </select>
+
+        <select>
+            <option value="" disabled selected>Select Day</option>
+            <option>Saturday</option>
+            <option>Sunday</option>
+            <option>Monday</option>
+            <option>Tuesday</option>
+        </select>
+    </div>
+
+    <textarea placeholder="Send Message (Optional)"></textarea>
+    <button class="submit-btn">Make an Appointment</button>
+</div>
+
+
+        <!-- Previous Reservations -->
+        <div class="info-box">
+            <h3>Previous Reservations:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Department</th>
+                        <th>Doctor</th>
+                        <th>Service</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cardiology</td>
+                        <td>Dr. Monica James</td>
+                        <td>Heart Checkup</td>
+                        <td>Nov 10, 2025</td>
+                    </tr>
+                    <tr>
+                        <td>Dermatology</td>
+                        <td>Dr. Erica Johnson</td>
+                        <td>Skin Care</td>
+                        <td>Nov 5, 2025</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Upload Popup -->
+    <div class="popup" id="uploadPopup">
+        <div class="popup-content">
+            <span class="close-btn" id="closePopup">&times;</span>
+            <div class="upload-box">
+                <div class="upload-icon">⬆️</div>
+                <h3>Upload New Image</h3>
+                <input type="file" id="uploadInput" accept="image/*">
+                <div class="popup-buttons">
+                    <button class="upload-btn">Upload</button>
+                    <button class="cancel-btn" id="cancelPopup">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Chronic Disease Popup -->
+    <div class="popup" id="diseasePopup">
+        <div class="popup-content">
+            <span class="close-btn" id="closeDiseasePopup">&times;</span>
+            <h3>Add New Chronic Diseases</h3>
+            <input type="text" id="diseaseInput" placeholder="Enter Chronic Diseases">
+            <div class="popup-buttons">
+                <button class="upload-btn" id="addDiseaseBtn">Add</button>
+                <button class="cancel-btn" id="cancelDiseasePopup">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-logo">
+                <img src="image/1.png" alt="Logo">
+                <h3>Health Gate</h3>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Departments</a></li>
+                    <li><a href="#">Doctors</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">FAQ’s</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
+                <p>tim.jennings@example.com</p>
+                <p>(406) 555-0120</p>
+            </div>
+
+            <div class="footer-social">
+                <h4>Social Media</h4>
+                <div class="icons">
+                    <a href="#"><img src="image/face.png" alt="Facebook"></a>
+                    <a href="#"><img src="image/ins.png" alt="Instagram"></a>
+                    <a href="#"><img src="image/in.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="image/X.png" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ------------------------------------------------------------------------------------------------------ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="js/vue.global.js"></script>
+    <script src="asset/js/profile.js"></script>
+    <!-- -----------------------------------------------------------------------------------------------------------------        -->
+</body>
